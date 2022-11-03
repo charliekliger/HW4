@@ -1,7 +1,6 @@
 public class Node {
 
     public Object element;
-
     public Node leftChild;
     public Node rightChild;
 
@@ -9,7 +8,8 @@ public class Node {
         this (o, null, null);
     }
 
-    public Node (Object o, Node l, Node r) {
+    public Node (Object o, Node l, Node r)
+    {
         element = o;
         leftChild = l;
         rightChild = r;

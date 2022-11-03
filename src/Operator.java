@@ -1,6 +1,6 @@
 import java.util.Map;
-
-public class Operator implements Comparable<Operator> {
+public class Operator implements Comparable<Operator>
+{
     private final static Map<String, Integer> OPERATORS = Map.ofEntries(
             Map.entry("+", 1),
             Map.entry("-", 1),
@@ -46,4 +46,5 @@ public class Operator implements Comparable<Operator> {
     public boolean equals(Operator o) {
         return symbol.equals(o.symbol);
     }
+
 }
