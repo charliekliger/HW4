@@ -4,6 +4,7 @@ public class ExpressionTree
 {
     public static Node convert(String postfix)
     {
+
         Stack<Node> myStack = new Stack<Node>();
         Node current;
 
@@ -19,8 +20,11 @@ public class ExpressionTree
             {
                 current = new Node(token);
 
-                current.rightChild = myStack.pop();
-                current.leftChild = myStack.pop();
+                if (!myStack.isEmpty())
+                    current.rightChild = myStack.pop();
+
+                if(!myStack.isEmpty())
+                    current.leftChild = myStack.pop();
 
                 myStack.push(current);
             }

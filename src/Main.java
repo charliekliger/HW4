@@ -20,19 +20,22 @@ public class Main
         while (true)
         {
             System.out.println("\nType your expression: ");
-            String postfix = scanner.nextLine();
+            String input = scanner.nextLine();
 
-            if (postfix.equals("0"))
+            if (input.equals("0"))
                 break;
 
-            while (!isValidExpression(postfix))
+            while (!isValidExpression(input))
             {
                 System.err.println("invalid expression, try again...");
-                postfix = scanner.nextLine();
+                input = scanner.nextLine();
             }
 
+            Converter postfix = new Converter(input);
 
-            Node root = ExpressionTree.convert(postfix);
+            ExpressionTree tree = new ExpressionTree();
+            Node root = tree.convert(postfix.toPostFix());
+
 
             ExpressionTree.postorder(root);
             ExpressionTree.inorder(root);
