@@ -25,6 +25,7 @@ public class ExpressionTree
                 myStack.push(current);
             }
         }
+
         current = myStack.pop();
         return current;
     }
