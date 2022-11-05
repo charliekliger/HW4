@@ -37,15 +37,15 @@ public class Main
             Node root = tree.convert(postfix.toPostFix());
 
             System.out.print("Postorder: ");
-            ExpressionTree.postorder(root);
+            tree.postorder(root);
             System.out.println();
 
             System.out.print("Inorder: ");
-            ExpressionTree.inorder(root);
+            tree.inorder(root);
             System.out.println();
 
             System.out.print("Preorder: ");
-            ExpressionTree.preorder(root);
+            tree.preorder(root);
             System.out.println();
         }
     }

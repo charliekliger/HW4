@@ -2,10 +2,10 @@ import java.util.Stack;
 
 public class ExpressionTree
 {
-    public static Node convert(String postfix)
+    public Node convert(String postfix)
     {
 
-        Stack<Node> myStack = new Stack<Node>();
+        Stack<Node> myStack = new Stack<>();
         Node current;
 
         for (String token : ParserHelper.parse(postfix.toCharArray()))
@@ -34,7 +34,7 @@ public class ExpressionTree
         return current;
     }
 
-    public static void inorder(Node root)
+    public void inorder(Node root)
     {
         if (root == null)
             return;
@@ -44,7 +44,7 @@ public class ExpressionTree
         inorder(root.rightChild);
     }
 
-    public static void preorder(Node root)
+    public void preorder(Node root)
     {
         if (root == null)
             return;
@@ -54,7 +54,7 @@ public class ExpressionTree
         preorder(root.rightChild);
     }
 
-    public static void postorder(Node root)
+    public void postorder(Node root)
     {
         if (root == null)
             return;
